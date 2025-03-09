@@ -13,7 +13,7 @@ export default function ArabicLoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    router.push('');
+    router.push('http://reg.sabel.in/');
   };
 
   return (
