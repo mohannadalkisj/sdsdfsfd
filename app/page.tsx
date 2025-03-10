@@ -29,7 +29,6 @@ export default function ArabicLoginPage() {
           </div>
           <div
             className="mt-6 text-blue-900 text-6xl font-bold"
-            style={{ fontFamily: 'Arial, sans-serif' }}
           >
             سهل
           </div>
