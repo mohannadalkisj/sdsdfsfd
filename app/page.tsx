@@ -48,6 +48,9 @@ export default function ArabicLoginPage() {
               placeholder="أدخل الرقم المدني"
               className="w-full px-4 py-3 text-right rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               dir="rtl"
+              required
+              minLength={9}
+              maxLength={12}
             />
           </div>
 
@@ -59,6 +62,7 @@ export default function ArabicLoginPage() {
                 checked={agreeToTerms}
                 onChange={(e) => setAgreeToTerms(e.target.checked)}
                 className="w-5 h-5"
+                required
               />
               <span className="text-sm" dir="rtl">
                 أوافق على الشروط والأحكام
@@ -70,7 +74,7 @@ export default function ArabicLoginPage() {
           <button
             type="submit"
             className="w-full py-3 px-4 bg-blue-500 text-gray-100 rounded-full font-medium mb-6"
-            disabled={!agreeToTerms}
+            disabled={!agreeToTerms && civilNumber.length > 9 }
           >
             <span dir="rtl">تسجيل الدخول</span>
           </button>
